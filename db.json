@@ -1,0 +1,178 @@
+{
+  "imoveis": [
+    {
+      "id": "1",
+      "titulo": "Apartamento aconchegante no centro",
+      "tipo": "Apartamento",
+      "cidade": "Porto Alegre",
+      "bairro": "Moinhos de Vento",
+      "preco": 320,
+      "capacidade": 4,
+      "comodidades": [
+        "Wi-Fi",
+        "Ar-condicionado",
+        "Cozinha"
+      ],
+      "disponivel": "2025-06-01",
+      "foto": null,
+      "avaliacao": 4.92,
+      "reservas": [
+        {
+          "nome": "Ana Lima",
+          "checkIn": "2025-06-10",
+          "checkOut": "2025-06-15",
+          "hospedes": 2
+        },
+        {
+          "nome": "Carlos Souza",
+          "checkIn": "2025-07-01",
+          "checkOut": "2025-07-05",
+          "hospedes": 3
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "titulo": "Casa com piscina e jardim",
+      "tipo": "Casa",
+      "cidade": "Gramado",
+      "bairro": "Centro",
+      "preco": 780,
+      "capacidade": 8,
+      "comodidades": [
+        "Piscina",
+        "Wi-Fi",
+        "Churrasqueira",
+        "Garagem"
+      ],
+      "disponivel": "2025-05-20",
+      "foto": null,
+      "avaliacao": 4.87,
+      "reservas": [
+        {
+          "nome": "Mariana Costa",
+          "checkIn": "2025-05-25",
+          "checkOut": "2025-05-30",
+          "hospedes": 6
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "titulo": "Kitnet moderna próxima à praia",
+      "tipo": "Kitnet",
+      "cidade": "Torres",
+      "bairro": "Praia Grande",
+      "preco": 190,
+      "capacidade": 2,
+      "comodidades": [
+        "Wi-Fi",
+        "Ar-condicionado"
+      ],
+      "disponivel": "2025-06-15",
+      "foto": null,
+      "avaliacao": 4.75,
+      "reservas": []
+    },
+    {
+      "id": "4",
+      "titulo": "Chácara tranquila na serra gaúcha",
+      "tipo": "Chácara",
+      "cidade": "Canela",
+      "bairro": "Zona Rural",
+      "preco": 550,
+      "capacidade": 10,
+      "comodidades": [
+        "Churrasqueira",
+        "Fogão a lenha",
+        "Trilhas",
+        "Estacionamento"
+      ],
+      "disponivel": "2025-06-01",
+      "foto": null,
+      "avaliacao": 4.96,
+      "reservas": [
+        {
+          "nome": "Pedro Alves",
+          "checkIn": "2025-06-20",
+          "checkOut": "2025-06-23",
+          "hospedes": 8
+        },
+        {
+          "nome": "Julia Mendes",
+          "checkIn": "2025-07-10",
+          "checkOut": "2025-07-14",
+          "hospedes": 5
+        },
+        {
+          "nome": "Renato Borges",
+          "checkIn": "2025-08-01",
+          "checkOut": "2025-08-04",
+          "hospedes": 10
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "titulo": "Loft estiloso no bairro histórico",
+      "tipo": "Loft",
+      "cidade": "Pelotas",
+      "bairro": "Centro Histórico",
+      "preco": 250,
+      "capacidade": 2,
+      "comodidades": [
+        "Wi-Fi",
+        "Cozinha equipada",
+        "Netflix"
+      ],
+      "disponivel": "2025-05-28",
+      "foto": null,
+      "avaliacao": 4.83,
+      "reservas": []
+    },
+    {
+      "id": "6",
+      "titulo": "Cobertura com vista panorâmica",
+      "tipo": "Apartamento",
+      "cidade": "Porto Alegre",
+      "bairro": "Bela Vista",
+      "preco": 620,
+      "capacidade": 6,
+      "comodidades": [
+        "Piscina",
+        "Sauna",
+        "Wi-Fi",
+        "Garagem",
+        "Ar-condicionado"
+      ],
+      "disponivel": "2025-06-10",
+      "foto": null,
+      "avaliacao": 4.99,
+      "reservas": [
+        {
+          "nome": "Fernanda Rocha",
+          "checkIn": "2025-06-12",
+          "checkOut": "2025-06-16",
+          "hospedes": 4
+        }
+      ]
+    },
+    {
+      "titulo": "casa na praia",
+      "tipo": "Casa",
+      "cidade": "pelotas",
+      "bairro": "laranja",
+      "preco": 500,
+      "capacidade": 6,
+      "disponivel": "2026-05-22",
+      "foto": {},
+      "comodidades": [
+        "wifi"
+      ],
+      "avaliacao": 0,
+      "reservas": [],
+      "id": "xNg9UoJ7oY0"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
