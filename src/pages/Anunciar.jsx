@@ -1,10 +1,16 @@
 import { useForm } from "react-hook-form";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import uploadIcon from "../assets/upload.svg";
 
 export function Anunciar({ onNavegar }) {
   const { register, handleSubmit, reset, setFocus } = useForm();
+
+  const [comodidades, setComodidades] = useState([]);
+
+  const comodidadesOpcoes = [
+    "Wi-Fi", "Ar-condicionado", "Piscina", "Garagem", "Churrasqueira", "Cozinha", "Netflix", "Sauna", "Trilhas",
+  ];
 
   async function cadastraImovel(data) {
     const titulo = data.titulo;
@@ -15,10 +21,6 @@ export function Anunciar({ onNavegar }) {
     const capacidade = Number(data.capacidade);
     const disponivel = data.disponivel;
     const foto = data.foto;
-
-    const comodidades = data.comodidades
-      ? data.comodidades.split(",").map((c) => c.trim())
-      : [];
 
     try {
       const resposta = await fetch("http://localhost:3000/imoveis", {
@@ -46,8 +48,15 @@ export function Anunciar({ onNavegar }) {
     } catch (erro) {
       console.log(`Erro: ${erro.message}`);
     }
-
+    
+    setComodidades([]);
     reset();
+  }
+
+  function toggleComodidade(item) {
+    setComodidades((prev) =>
+      prev.includes(item) ? prev.filter((c) => c !== item) : [...prev, item]
+    );
   }
 
   useEffect(() => {
@@ -228,13 +237,22 @@ export function Anunciar({ onNavegar }) {
             >
               Comodidades
             </label>
-            <input
-              type="text"
-              id="comodidades"
-              placeholder="Ex: Wi-Fi, Piscina, Churrasqueira, Garagem"
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-red-700"
-              {...register("comodidades")}
-            />
+            <div className="flex flex-wrap gap-2">
+              {comodidadesOpcoes.map((item) => (
+                <button
+                  key={item}
+                  type="button"
+                  onClick={() => toggleComodidade(item)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium border transition-all shadow-sm ${
+                    comodidades.includes(item)
+                      ? "bg-rose-500 text-white border-rose-500"
+                      : "bg-white text-gray-600 border-gray-300 hover:border-gray-400"
+                  }`}
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 pt-2">

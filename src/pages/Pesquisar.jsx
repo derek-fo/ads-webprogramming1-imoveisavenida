@@ -48,23 +48,12 @@ export function Pesquisar({ onNavegar, onSelecionarImovel }) {
 
   return (
     <div>
-      <Navbar onNavegar={onNavegar} />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h2 className="text-2xl text-center font-bold text-gray-900 mb-6">
-          Pesquisa de Imóveis
-        </h2>
-
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <form
           className="flex mx-auto items-center gap-3 border border-gray-300 rounded-full shadow-sm hover:shadow-md transition-shadow px-5 py-3 mb-8 max-w-2xl bg-white"
           onSubmit={handleSubmit(pesquisaImoveis)}
         >
-          <img
-            className="w-5 h-5 opacity-40 shrink-0"
-            src={magnifyIcon}
-            alt="magnify icon"
-          />
-
           <input
             type="text"
             required
@@ -72,11 +61,12 @@ export function Pesquisar({ onNavegar, onSelecionarImovel }) {
             className="flex-1 text-sm text-gray-800 placeholder-gray-400 outline-none bg-transparent"
             {...register("pesquisa")}
           />
-          <input
+          <button
             type="submit"
-            value="Pesquisar"
-            className="bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-5 py-2 rounded-full cursor-pointer transition-colors shrink-0"
-          />
+            className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full cursor-pointer transition-colors shrink-0"
+          >
+            <img src={magnifyIcon} alt="Pesquisar" className="w-5 h-5 invert" />
+          </button>
         </form>
 
         {semResultado && (
