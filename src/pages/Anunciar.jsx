@@ -2,6 +2,14 @@ import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import uploadIcon from "../assets/upload.svg";
+import wifiIcon from "../assets/wifi.svg";
+import garageIcon from "../assets/garage.svg";
+import poolIcon from "../assets/pool.svg";
+import bbqIcon from "../assets/bbq.svg";
+import elevatorIcon from "../assets/elevator.svg";
+import tvIcon from "../assets/tv.svg";
+import acIcon from "../assets/ac.svg";
+import bedIcon from "../assets/bed.svg";
 
 export function Anunciar({ onNavegar }) {
   const { register, handleSubmit, reset, setFocus } = useForm();
@@ -9,7 +17,14 @@ export function Anunciar({ onNavegar }) {
   const [comodidades, setComodidades] = useState([]);
 
   const comodidadesOpcoes = [
-    "Wi-Fi", "Ar-condicionado", "Piscina", "Garagem", "Churrasqueira", "Cozinha", "Netflix", "Sauna", "Trilhas",
+    "Wi-fi",
+    "Piscina",
+    "Garagem",
+    "Churrasqueira",
+    "Elevador",
+    "TV",
+    "Ar Condicionado",
+    "Roupa de cama",
   ];
 
   async function cadastraImovel(data) {
@@ -48,14 +63,14 @@ export function Anunciar({ onNavegar }) {
     } catch (erro) {
       console.log(`Erro: ${erro.message}`);
     }
-    
+
     setComodidades([]);
     reset();
   }
 
   function toggleComodidade(item) {
     setComodidades((prev) =>
-      prev.includes(item) ? prev.filter((c) => c !== item) : [...prev, item]
+      prev.includes(item) ? prev.filter((c) => c !== item) : [...prev, item],
     );
   }
 
@@ -243,12 +258,23 @@ export function Anunciar({ onNavegar }) {
                   key={item}
                   type="button"
                   onClick={() => toggleComodidade(item)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium border transition-all shadow-sm ${
+                  className={`px-4 py-2 rounded-full text-sm font-medium border transition-all shadow-sm flex items-center gap-2 ${
                     comodidades.includes(item)
-                      ? "bg-rose-500 text-white border-rose-500"
-                      : "bg-white text-gray-600 border-gray-300 hover:border-gray-400"
+                      ? "bg-red-600 text-white border-red-600"
+                      : "bg-white text-gray-600 border-gray-300 hover:border-gray-400" 
                   }`}
                 >
+                  <img src={item === "Wi-fi" ? wifiIcon : 
+                    item === "Garagem" ? garageIcon :
+                    item === "Garagem" ? garageIcon :
+                    item === "Piscina" ? poolIcon :
+                    item === "Churrasqueira" ? bbqIcon :
+                    item === "Elevador" ? elevatorIcon :
+                    item === "TV" ? tvIcon :
+                    item === "Ar Condicionado" ? acIcon :
+                    item === "Roupa de cama" ? bedIcon : void 0}
+                    alt={item}
+                    className={`w-4 h-4 ${comodidades.includes(item) ? "brightness-0 invert" : ""}`} />
                   {item}
                 </button>
               ))}
