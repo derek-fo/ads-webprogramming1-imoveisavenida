@@ -200,8 +200,7 @@ export function Detalhe() {
                   {imovel.disponivel}
                 </p>
               </div>
-              {/* Avatar do proprietário — placeholder */}
-              {/* TODO: trocar pela foto do proprietário quando tiver autenticação */}
+
               <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-400 shrink-0">
                 <svg
                   className="w-6 h-6"
@@ -224,7 +223,7 @@ export function Detalhe() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
                   O que este lugar oferece
                 </h3>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-3 pb-4">
                   {imovel.comodidades.map((item) => (
                     <div
                       key={item}
@@ -249,12 +248,12 @@ export function Detalhe() {
               </div>
             )}
 
-            <div className="border-b border-gray-200 pb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+            <div className="border-b border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 ">
                 Estatísticas do imóvel
               </h3>
-              <div className="grid grid-cols-3 gap-4">
-                <div className="bg-red-50 border border-red-100 rounded-xl p-4 text-center">
+              <div className="grid grid-cols-3 gap-4 pb-6">
+                <div className="p-4 text-center">
                   <p className="text-xl font-bold text-gray-900">
                     {totalReservas}
                   </p>
@@ -263,8 +262,7 @@ export function Detalhe() {
                   </p>
                 </div>
 
-                <div className="bg-red-50 border border-red-100 rounded-xl p-4 text-center">
-                  <div className="text-2xl mb-1">👥</div>
+                <div className="p-4 text-center">
                   <p className="text-xl font-bold text-gray-900">
                     {mediaHospedes}
                   </p>
@@ -273,8 +271,7 @@ export function Detalhe() {
                   </p>
                 </div>
 
-                <div className="bg-red-50 border border-red-100 rounded-xl p-4 text-center">
-                  <div className="text-2xl mb-1">📅</div>
+                <div className="p-4 text-center">
                   <p className="text-xl font-bold text-gray-900">
                     {mediaDias}d
                   </p>
@@ -283,7 +280,6 @@ export function Detalhe() {
               </div>
             </div>
 
-            {/* ── Lista de reservas — Requisito E ── */}
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
                 Reservas realizadas
@@ -298,9 +294,7 @@ export function Detalhe() {
                 </div>
               ) : (
                 <div className="space-y-3">
-                  {/* Percorre o array reservas e exibe cada uma */}
                   {reservas.map((r, index) => {
-                    // Calcula a duração da estadia em dias
                     const dias = Math.ceil(
                       (new Date(r.checkOut) - new Date(r.checkIn)) /
                         (1000 * 60 * 60 * 24),
@@ -310,7 +304,6 @@ export function Detalhe() {
                         key={index}
                         className="flex items-center justify-between p-4 bg-gray-50 border border-gray-100 rounded-xl"
                       >
-                        {/* Avatar com inicial do nome */}
                         <div className="flex items-center gap-3">
                           <div className="w-9 h-9 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm shrink-0">
                             {r.nome[0].toUpperCase()}
@@ -336,10 +329,8 @@ export function Detalhe() {
             </div>
           </div>
 
-          {/* ── Coluna direita: card de reserva — Requisito D ── */}
           <div className="lg:col-span-1">
             <div className="sticky top-24 border border-gray-200 rounded-2xl shadow-lg p-6 bg-white">
-              {/* Preço */}
               <div className="flex items-baseline gap-1 mb-5">
                 <span className="text-2xl font-bold text-gray-900">
                   R$ {imovel.preco}
@@ -351,12 +342,10 @@ export function Detalhe() {
                 Fazer reserva
               </h4>
 
-              {/* Formulário de reserva */}
               <form
                 className="space-y-3"
                 onSubmit={handleSubmit(cadastraReserva)}
               >
-                {/* Check-in e Check-out lado a lado dentro de uma borda única */}
                 <div className="border border-gray-300 rounded-xl overflow-hidden divide-y divide-gray-300">
                   <div className="grid grid-cols-2 divide-x divide-gray-300">
                     <div className="p-3">
@@ -384,7 +373,6 @@ export function Detalhe() {
                     </div>
                   </div>
 
-                  {/* Número de hóspedes como select */}
                   <div className="p-3">
                     <label className="block text-xs font-bold text-gray-700 mb-1">
                       HÓSPEDES
@@ -394,7 +382,6 @@ export function Detalhe() {
                       className="w-full text-sm text-gray-800 outline-none bg-transparent"
                       {...register("hospedes")}
                     >
-                      {/* Gera as opções de 1 até a capacidade máxima */}
                       {Array.from(
                         { length: imovel.capacidade },
                         (_, i) => i + 1,
@@ -407,7 +394,6 @@ export function Detalhe() {
                   </div>
                 </div>
 
-                {/* Nome do hóspede */}
                 <input
                   type="text"
                   required
@@ -416,10 +402,8 @@ export function Detalhe() {
                   {...register("nome")}
                 />
 
-                {/* Mensagem de erro de validação */}
                 {erro && <p className="text-xs text-red-500">{erro}</p>}
-
-                {/* Mensagem de sucesso */}
+                
                 {enviado && (
                   <div className="bg-green-50 border border-green-200 text-green-700 text-sm rounded-xl px-4 py-3 text-center">
                     ✅ Reserva registrada com sucesso!
