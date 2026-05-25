@@ -2,12 +2,11 @@ import { useNavigate } from "react-router";
 import houseIcon from "../assets/housesun.svg";
 import magnifyIcon from "../assets/magnify.svg";
 
-// busca e setBusca vêm do main.jsx via Home → Navbar
 export function Navbar({ busca, setBusca }) {
   const navigate = useNavigate();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 shadow-sm bg-white">
+    <header className="sticky top-0 z-50 border-b border-gray-200 shadow-sm bg-linear-to-b from-white to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

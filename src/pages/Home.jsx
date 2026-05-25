@@ -1,17 +1,9 @@
-// ============================================================
-// Home.jsx — Página principal com listagem e filtros
-//
-// Recebe "busca" e "setBusca" do main.jsx e repassa ao Navbar.
-// O Navbar atualiza "busca" → a Home usa para filtrar os cards.
-// O filtro de categorias fica aqui embaixo, como no Airbnb.
-// ============================================================
-
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import { Navbar } from "../components/Navbar"
 import { CardImovel } from "../components/CardImovel"
+import { Footer } from "../components/Footer"
 
-// Categorias do filtro — ficam na Home, abaixo do header
 const categorias = [
   { label: "Todos",        value: "" },
   { label: "Casas",        value: "Casa" },
@@ -22,7 +14,6 @@ const categorias = [
   { label: "Studios",      value: "Studio" },
 ]
 
-// busca e setBusca vêm do main.jsx — são repassados ao Navbar
 export function Home({ busca, setBusca }) {
   const navigate = useNavigate()
 
@@ -31,7 +22,6 @@ export function Home({ busca, setBusca }) {
   const [erro,      setErro]      = useState(null)
   const [categoria, setCategoria] = useState("")
 
-  // Busca todos os imóveis da API ao carregar a página
   useEffect(() => {
     async function buscaImoveis() {
       try {
@@ -49,8 +39,6 @@ export function Home({ busca, setBusca }) {
     buscaImoveis()
   }, [])
 
-  // Filtra em tempo real: toda vez que "busca" ou "categoria" mudam,
-  // imoveisFiltrados é recalculado automaticamente pelo React
   const imoveisFiltrados = imoveis.filter((im) => {
     const termo = busca.toLowerCase()
     const matchBusca =
@@ -69,10 +57,6 @@ export function Home({ busca, setBusca }) {
 
   return (
     <div>
-      {/*
-        Passa busca e setBusca para o Navbar mostrar a barra de pesquisa.
-        O Navbar atualiza setBusca → re-renderiza imoveisFiltrados aqui.
-      */}
       <Navbar busca={busca} setBusca={setBusca} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -94,7 +78,6 @@ export function Home({ busca, setBusca }) {
           ))}
         </div>
 
-        {/* ── Estados: loading / erro / cards ── */}
         {loading ? (
           <div className="flex justify-center items-center py-20">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600" />
@@ -112,7 +95,6 @@ export function Home({ busca, setBusca }) {
           </div>
 
         ) : imoveisFiltrados.length === 0 ? (
-          // Mensagem de nenhum resultado — aparece enquanto o usuário digita
           <div className="flex flex-col items-center justify-center py-20 gap-4">
             <span className="text-5xl">🏠</span>
             <h3 className="text-lg font-semibold text-gray-700">Nenhum imóvel encontrado</h3>
@@ -128,7 +110,6 @@ export function Home({ busca, setBusca }) {
           </div>
 
         ) : (
-          // Grid de cards — filtragem em tempo real conforme o usuário digita
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {imoveisFiltrados.map((imovel) => (
               <CardImovel
@@ -141,6 +122,8 @@ export function Home({ busca, setBusca }) {
         )}
 
       </main>
+
+      <Footer />
     </div>
   )
 }

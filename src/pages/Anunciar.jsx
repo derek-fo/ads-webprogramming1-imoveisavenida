@@ -59,7 +59,7 @@ export function Anunciar({ onNavegar }) {
       if (!resposta.ok) throw new Error("Erro ao cadastrar o imóvel");
 
       const novoImovel = await resposta.json();
-      alert(`Imóvel cadastrado com sucesso! Código: ${novoImovel.id}`);
+      alert("Imóvel cadastrado com sucesso!");
     } catch (erro) {
       console.log(`Erro: ${erro.message}`);
     }
