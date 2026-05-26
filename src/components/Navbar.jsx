@@ -9,7 +9,6 @@ export function Navbar({ busca, setBusca }) {
     <header className="sticky top-0 z-50 border-b border-[#BCC5CC]/30 shadow-xs bg-white/90 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo */}
           <button
             onClick={() => navigate("/")}
             className="text-[#063154] font-extrabold text-lg sm:text-xl tracking-tight hover:opacity-90 transition-opacity flex items-center gap-2 text-left"
@@ -36,14 +35,13 @@ export function Navbar({ busca, setBusca }) {
           </nav>
         </div>
 
-        {/* Search Bar */}
         {setBusca && (
           <div className="pb-4">
             <div className="flex items-center gap-3 border border-[#BCC5CC] rounded-full shadow-xs hover:shadow-md focus-within:shadow-md focus-within:border-[#025F67] transition-all px-4 py-2.5 sm:px-5 sm:py-3 max-w-2xl mx-auto bg-white">
               <input
                 type="text"
                 placeholder="Buscar por cidade, bairro ou tipo..."
-                className="flex-1 text-xs sm:text-sm outline-none text-[#063154] placeholder-[#BCC5CC] bg-transparent"
+                className="flex-1 text-xs sm:text-base outline-none text-[#063154] placeholder-[#BCC5CC] bg-transparent"
                 value={busca}
                 onChange={(e) => setBusca(e.target.value)}
               />

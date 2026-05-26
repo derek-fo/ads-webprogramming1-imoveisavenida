@@ -4,8 +4,7 @@ export function CardImovel({ imovel, onVerDetalhe }) {
       className="cursor-pointer group flex flex-col"
       onClick={() => onVerDetalhe(imovel)}
     >
-      {/* Container da Foto */}
-      <div className="relative overflow-hidden rounded-2xl aspect-[4/3] sm:aspect-square mb-3 bg-[#BCC5CC]/20 border border-[#BCC5CC]/20 shadow-xs">
+      <div className="relative overflow-hidden rounded-2xl aspect-4/3 sm:aspect-square mb-3 bg-[#BCC5CC]/20 border border-[#BCC5CC]/20 shadow-xs">
         {imovel.foto ? (
           <img
             src={imovel.foto}
@@ -22,12 +21,11 @@ export function CardImovel({ imovel, onVerDetalhe }) {
           </div>
         )}
 
-        <span className="absolute top-3 left-3 bg-white/95 text-[#063154] text-xxs font-extrabold px-2.5 py-1 rounded-full shadow-xs backdrop-blur-xs tracking-wide uppercase border border-[#BCC5CC]/20">
+        <span className="absolute top-3 left-3 bg-white/95 text-[#063154] text-xxs font-bold px-2.5 py-1 rounded-full shadow-xs backdrop-blur-xs tracking-wide border border-[#BCC5CC]/20">
           {imovel.tipo}
         </span>
       </div>
 
-      {/* Conteúdo Textual */}
       <div className="space-y-1 px-1">
         <div className="flex items-start justify-between gap-2">
           <h3 className="font-bold text-[#063154] text-sm sm:text-base leading-snug line-clamp-1 group-hover:text-[#025F67] transition-colors">

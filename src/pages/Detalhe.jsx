@@ -134,28 +134,20 @@ export function Detalhe() {
           <span className="text-[#063154]/90">{imovel.bairro}, {imovel.cidade}</span>
         </div>
 
-        {/* Galeria de Fotos Otimizada Mobile-First */}
-        <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 h-56 sm:h-96 mb-6 sm:mb-8 rounded-2xl overflow-hidden shadow-xs border border-[#BCC5CC]/30 bg-white">
+        <div className="sm:grid-cols-4 gap-2 h-56 sm:h-96 mb-6 sm:mb-8 rounded-2xl overflow-hidden shadow-xs border border-[#BCC5CC]/30 bg-white">
           <div className="sm:col-span-2 sm:row-span-2 bg-[#BCC5CC]/10 flex items-center justify-center h-full">
             {imovel.foto ? (
               <img src={imovel.foto} alt={imovel.titulo} className="w-full h-full object-cover" />
             ) : (
               <div className="flex flex-col items-center gap-2 text-[#BCC5CC]">
-                <span className="text-xs font-bold uppercase">Foto principal</span>
+
               </div>
             )}
           </div>
-          {/* Ocultas em telas ultra-pequenas (Mobile First) para evitar poluição visual */}
-          <div className="hidden sm:flex bg-[#BCC5CC]/5 items-center justify-center text-[#063154]/30 font-bold text-xs">Foto 2</div>
-          <div className="hidden sm:flex bg-[#BCC5CC]/5 items-center justify-center text-[#063154]/30 font-bold text-xs">Foto 3</div>
-          <div className="hidden sm:flex bg-[#BCC5CC]/5 items-center justify-center text-[#063154]/30 font-bold text-xs">Foto 4</div>
-          <div className="hidden sm:flex bg-[#BCC5CC]/5 items-center justify-center text-[#063154]/30 font-bold text-xs">Foto 5</div>
         </div>
 
-        {/* Layout principal em duas colunas responsivo */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-start">
-          
-          {/* LADO ESQUERDO: Detalhes do imóvel */}
+
           <div className="lg:col-span-2 space-y-6 sm:space-y-8">
             <div className="flex items-center justify-between pb-4 border-b border-[#BCC5CC]/30">
               <div>
@@ -173,7 +165,6 @@ export function Detalhe() {
               </div>
             </div>
 
-            {/* Comodidades */}
             {imovel.comodidades && imovel.comodidades.length > 0 && (
               <div className="border-b border-[#BCC5CC]/30 pb-6">
                 <h3 className="text-base sm:text-lg font-bold text-[#063154] mb-4">O que este lugar oferece</h3>
@@ -195,7 +186,6 @@ export function Detalhe() {
               </div>
             )}
 
-            {/* Estatísticas */}
             <div className="border-b border-[#BCC5CC]/30 pb-2">
               <h3 className="text-base sm:text-lg font-bold text-[#063154] mb-3">Desempenho do imóvel</h3>
               <div className="grid grid-cols-3 gap-3">
@@ -214,7 +204,6 @@ export function Detalhe() {
               </div>
             </div>
 
-            {/* Reservas Realizadas */}
             <div>
               <h3 className="text-base sm:text-lg font-bold text-[#063154] mb-4">
                 Reservas registradas
@@ -253,7 +242,6 @@ export function Detalhe() {
             </div>
           </div>
 
-          {/* LADO DIREITO: Widget de Reserva */}
           <div className="lg:col-span-1 mt-4 lg:mt-0">
             <div className="sticky top-24 border border-[#BCC5CC]/40 rounded-2xl shadow-md p-5 sm:p-6 bg-white">
               <div className="flex items-baseline gap-1 mb-4">
@@ -267,11 +255,11 @@ export function Detalhe() {
                 <div className="border border-[#BCC5CC] rounded-xl overflow-hidden divide-y divide-[#BCC5CC] bg-[#F7F6F2]/30">
                   <div className="grid grid-cols-2 divide-x divide-[#BCC5CC]">
                     <div className="p-2.5">
-                      <label className="block text-xxs font-black text-[#063154]/70 tracking-wide mb-0.5">CHECK-IN</label>
+                      <label className="block text-xxs font-black text-[#063154]/70 tracking-wide mb-0.5">Check-in</label>
                       <input type="date" required className="w-full text-xs font-semibold text-[#063154] outline-none bg-transparent" {...register("checkIn")} />
                     </div>
                     <div className="p-2.5">
-                      <label className="block text-xxs font-black text-[#063154]/70 tracking-wide mb-0.5">CHECK-OUT</label>
+                      <label className="block text-xxs font-black text-[#063154]/70 tracking-wide mb-0.5">Check-out</label>
                       <input type="date" required className="w-full text-xs font-semibold text-[#063154] outline-none bg-transparent" {...register("checkOut")} />
                     </div>
                   </div>
@@ -304,7 +292,6 @@ export function Detalhe() {
                 />
               </form>
 
-              <p className="text-xxs font-medium text-[#063154]/40 text-center mt-3">Você não receberá cobranças imediatas</p>
             </div>
           </div>
         </div>

@@ -81,7 +81,6 @@ export function Anunciar({ onNavegar }) {
     <div className="bg-[#F7F6F2] min-h-screen font-sans antialiased">
       <Navbar onNavegar={onNavegar} />
 
-      {/* Mobile-first structural wrapper */}
       <main className="max-w-2xl mx-auto px-4 py-6 sm:px-6 sm:py-10">
         <div className="mb-6 sm:mb-8 text-center sm:text-left">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#063154] tracking-tight">
@@ -92,38 +91,37 @@ export function Anunciar({ onNavegar }) {
           </p>
         </div>
 
-        {/* Card Form Container */}
         <form 
           className="space-y-5 bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-[#BCC5CC]/40" 
           onSubmit={handleSubmit(cadastraImovel)}
         >
-          {/* FOTO UPLOAD - Fixed Click UX via label */}
+ 
           <div>
             <span className="block text-sm font-bold text-[#063154] mb-2">
-              Foto do imóvel
+              Fotos do imóvel
             </span>
             <label 
-              htmlFor="foto" 
+              htmlFor="fotos" 
               className="border-2 border-dashed border-[#BCC5CC] rounded-xl p-6 sm:p-8 flex flex-col items-center gap-2 bg-[#F7F6F2]/50 hover:bg-[#F7F6F2] hover:border-[#025F67] cursor-pointer transition-all dynamic-focus group"
             >
               <img
                 className="w-8 h-8 sm:w-10 sm:h-10 text-[#025F67] group-hover:scale-105 transition-transform"
                 src={uploadIcon}
-                alt="upload icon"
+                alt="upload icons"
               />
-              <p className="text-xs sm:text-sm font-semibold text-[#063154]">Clique para adicionar foto</p>
+              <p className="text-xs sm:text-sm font-semibold text-[#063154]">Clique para adicionar fotos</p>
               <p className="text-xxs sm:text-xs text-[#BCC5CC]">PNG, JPG até 5MB</p>
               <input
                 type="file"
-                id="foto"
+                id="fotos"
                 accept="image/*"
+                multiple
                 className="hidden"
-                {...register("foto")}
+                {...register("fotos")}
               />
             </label>
           </div>
 
-          {/* TITULO */}
           <div>
             <label
               htmlFor="titulo"
@@ -141,7 +139,6 @@ export function Anunciar({ onNavegar }) {
             />
           </div>
 
-          {/* TIPO & CIDADE - Grid Responsive */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label
@@ -185,7 +182,6 @@ export function Anunciar({ onNavegar }) {
             </div>
           </div>
 
-          {/* BAIRRO & DATA - Grid Responsive */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label
@@ -221,7 +217,6 @@ export function Anunciar({ onNavegar }) {
             </div>
           </div>
 
-          {/* PREÇO & CAPACIDADE - Grid Responsive */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label
@@ -260,7 +255,6 @@ export function Anunciar({ onNavegar }) {
             </div>
           </div>
 
-          {/* COMODIDADES - Touch Friendly on Mobile */}
           <div>
             <label className="block text-sm font-bold text-[#063154] mb-2">
               Comodidades
@@ -271,7 +265,7 @@ export function Anunciar({ onNavegar }) {
                   key={item}
                   type="button"
                   onClick={() => toggleComodidade(item)}
-                  className={`px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold border transition-all flex items-center gap-2 shadow-sm min-h-[40px] select-none ${
+                  className={`px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold border transition-all flex items-center gap-2 shadow-sm min-h-10 select-none ${
                     comodidades.includes(item)
                       ? "bg-[#025F67] text-white border-[#025F67] scale-[1.02]"
                       : "bg-white text-[#063154] border-[#BCC5CC] hover:border-[#025F67] hover:bg-[#F7F6F2]/40" 
@@ -297,18 +291,17 @@ export function Anunciar({ onNavegar }) {
             </div>
           </div>
 
-          {/* SUBMIT BUTTONS - Mobile First Flow */}
           <div className="flex flex-col-reverse sm:flex-row justify-end gap-3 pt-4 border-t border-[#BCC5CC]/30">
             <input
               type="reset"
               value="Limpar"
               onClick={() => setComodidades([])}
-              className="w-full sm:w-auto bg-[#F7F6F2] hover:bg-[#BCC5CC]/30 text-[#063154] font-bold text-sm px-6 py-3.5 rounded-xl cursor-pointer transition-colors text-center min-h-[48px]"
+              className="w-full sm:w-auto bg-[#BCC5CC]/30 hover:bg-[#BCC5CC]/50 text-[#063154] font-bold text-sm px-6 py-3.5 rounded-xl cursor-pointer transition-colors text-center min-h-12"
             />
             <input
               type="submit"
               value="Publicar anúncio"
-              className="w-full sm:w-auto bg-[#025F67] hover:bg-[#063154] text-white font-bold text-sm px-8 py-3.5 rounded-xl cursor-pointer transition-all transform active:scale-95 shadow-md shadow-[#025F67]/20 text-center min-h-[48px]"
+              className="w-full sm:w-auto bg-[#025F67] hover:bg-[#063154] text-white font-bold text-sm px-8 py-3.5 rounded-xl cursor-pointer transition-all transform active:scale-95 shadow-md shadow-[#025F67]/20 text-center min-h-12"
             />
           </div>
         </form>
