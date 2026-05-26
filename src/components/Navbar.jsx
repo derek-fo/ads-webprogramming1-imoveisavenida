@@ -12,7 +12,7 @@ export function Navbar({ busca, setBusca }) {
           {/* Logo */}
           <button
             onClick={() => navigate("/")}
-            className="text-red-600 font-bold text-xl tracking-tight hover:opacity-80 transition-opacity flex items-center gap-2"
+            className="text-[#404F68] font-bold text-xl tracking-tight hover:opacity-80 transition-opacity flex items-center gap-2"
           >
             {/* trocar pelo logo do seu projeto */}
             <img className="w-10 h-10" src={houseIcon} alt="logo" />
@@ -22,13 +22,13 @@ export function Navbar({ busca, setBusca }) {
           <nav className="flex items-center gap-2">
             <button
               onClick={() => navigate("/")}
-              className="text-sm font-medium text-gray-700 hover:text-red-700 hover:underline px-4 py-2 rounded-full transition-colors"
+              className="text-sm font-medium text-gray-700 hover:text-[#7A859D] hover:underline px-4 py-2 rounded-full transition-colors"
             >
               Imóveis
             </button>
             <button
               onClick={() => navigate("/anunciar")}
-              className="text-sm font-medium bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-full transition-colors"
+              className="text-sm font-medium bg-[#404F68] hover:bg-[#7A859D] text-white px-5 py-2 rounded-full transition-colors"
             >
               + Anunciar
             </button>

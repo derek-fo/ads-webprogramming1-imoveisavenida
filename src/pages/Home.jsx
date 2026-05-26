@@ -80,7 +80,7 @@ export function Home({ busca, setBusca }) {
 
         {loading ? (
           <div className="flex justify-center items-center py-20">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600" />
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#404F68]" />
           </div>
 
         ) : erro ? (
@@ -88,7 +88,7 @@ export function Home({ busca, setBusca }) {
             <p className="text-red-500 font-semibold">{erro}</p>
             <button
               onClick={() => window.location.reload()}
-              className="mt-4 text-red-600 underline text-sm"
+              className="mt-4 text-[#404F68] underline text-sm"
             >
               Tentar novamente
             </button>
@@ -103,7 +103,7 @@ export function Home({ busca, setBusca }) {
             </p>
             <button
               onClick={() => { setBusca(""); setCategoria("") }}
-              className="text-red-600 text-sm font-medium hover:underline"
+              className="text-[#404F68] text-sm font-medium hover:underline"
             >
               Limpar filtros
             </button>

@@ -42,7 +42,7 @@ export function Detalhe() {
           <p className="text-gray-500 mb-4">Imóvel não encontrado.</p>
           <button
             onClick={() => navigate("/")}
-            className="text-red-600 underline text-sm"
+            className="text-[#404F68] underline text-sm"
           >
             Voltar para a listagem
           </button>
@@ -305,7 +305,7 @@ export function Detalhe() {
                         className="flex items-center justify-between p-4 bg-gray-50 border border-gray-100 rounded-xl"
                       >
                         <div className="flex items-center gap-3">
-                          <div className="w-9 h-9 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm shrink-0">
+                          <div className="w-9 h-9 rounded-full bg-[#F2F2F2] text-[#404F68] flex items-center justify-center font-bold text-sm shrink-0">
                             {r.nome[0].toUpperCase()}
                           </div>
                           <div>
@@ -398,7 +398,7 @@ export function Detalhe() {
                   type="text"
                   required
                   placeholder="Seu nome completo"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-red-700"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#7A859D]"
                   {...register("nome")}
                 />
 
@@ -413,7 +413,7 @@ export function Detalhe() {
                 <input
                   type="submit"
                   value="Reservar agora"
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-sm py-3.5 rounded-xl cursor-pointer transition-colors"
+                  className="w-full bg-[#404F68] hover:bg-[#7A859D] text-white font-bold text-sm py-3.5 rounded-xl cursor-pointer transition-colors"
                 />
               </form>
 

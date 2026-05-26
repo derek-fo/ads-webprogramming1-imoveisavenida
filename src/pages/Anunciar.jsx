@@ -97,7 +97,7 @@ export function Anunciar({ onNavegar }) {
             <label className="block text-sm font-semibold text-gray-700 mb-1.5">
               Foto do imóvel
             </label>
-            <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 flex flex-col items-center gap-2 bg-gray-50 hover:border-red-700 transition-colors">
+            <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 flex flex-col items-center gap-2 bg-gray-50 hover:border-[#7A859D] transition-colors">
               <img
                 className="w-10 h-10 text-gray-400"
                 src={uploadIcon}
@@ -108,7 +108,7 @@ export function Anunciar({ onNavegar }) {
                 type="file"
                 id="foto"
                 accept="image/*"
-                className="hidden w-full mt-2 rounded-xl border border-gray-300 px-4 py-2.5 text-sm focus:outline-none focus:ring1 focus:ring-red-700 bg-white"
+                className="hidden w-full mt-2 rounded-xl border border-gray-300 px-4 py-2.5 text-sm focus:outline-none focus:ring1 focus:ring-[#7A859D] bg-white"
                 {...register("foto")}
               />
             </div>
@@ -126,7 +126,7 @@ export function Anunciar({ onNavegar }) {
               id="titulo"
               required
               placeholder='"Apartamento com vista para o mar"'
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-red-700"
+              className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#7A859D]"
               {...register("titulo")}
             />
           </div>
@@ -142,7 +142,7 @@ export function Anunciar({ onNavegar }) {
               <select
                 id="tipo"
                 required
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-red-700 bg-white"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#7A859D] bg-white"
                 {...register("tipo")}
               >
                 <option value="">Selecione...</option>
@@ -166,7 +166,7 @@ export function Anunciar({ onNavegar }) {
                 id="cidade"
                 required
                 placeholder="Ex: Pelotas"
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-red-700"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#7A859D]"
                 {...register("cidade")}
               />
             </div>
@@ -185,7 +185,7 @@ export function Anunciar({ onNavegar }) {
                 id="bairro"
                 required
                 placeholder="Ex: Moinhos de Vento"
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-red-700"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#7A859D]"
                 {...register("bairro")}
               />
             </div>
@@ -201,7 +201,7 @@ export function Anunciar({ onNavegar }) {
                 type="date"
                 id="disponivel"
                 required
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-red-700"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#7A859D]"
                 {...register("disponivel")}
               />
             </div>
@@ -221,7 +221,7 @@ export function Anunciar({ onNavegar }) {
                 required
                 min="1"
                 placeholder="Ex: 320"
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-red-700"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#7A859D]"
                 {...register("preco")}
               />
             </div>
@@ -239,7 +239,7 @@ export function Anunciar({ onNavegar }) {
                 required
                 min="1"
                 placeholder="Ex: 4"
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-red-700"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#7A859D]"
                 {...register("capacidade")}
               />
             </div>
@@ -260,7 +260,7 @@ export function Anunciar({ onNavegar }) {
                   onClick={() => toggleComodidade(item)}
                   className={`px-4 py-2 rounded-full text-sm font-medium border transition-all shadow-sm flex items-center gap-2 ${
                     comodidades.includes(item)
-                      ? "bg-red-600 text-white border-red-600"
+                      ? "bg-[#404F68] text-white border-[#404F68]"
                       : "bg-white text-gray-600 border-gray-300 hover:border-gray-400" 
                   }`}
                 >
@@ -285,7 +285,7 @@ export function Anunciar({ onNavegar }) {
             <input
               type="submit"
               value="Publicar anúncio"
-              className="bg-red-600 hover:bg-red-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl cursor-pointer transition-colors"
+              className="bg-[#404F68] hover:bg-[#7A859D] text-white font-bold text-sm px-6 py-3.5 rounded-xl cursor-pointer transition-colors"
             />
             <input
               type="reset"
