@@ -104,20 +104,13 @@ export function Anunciar({ onNavegar }) {
               htmlFor="fotos" 
               className="border-2 border-dashed border-[#BCC5CC] rounded-xl p-6 sm:p-8 flex flex-col items-center gap-2 bg-[#F7F6F2]/50 hover:bg-[#F7F6F2] hover:border-[#025F67] cursor-pointer transition-all dynamic-focus group"
             >
-              <img
-                className="w-8 h-8 sm:w-10 sm:h-10 text-[#025F67] group-hover:scale-105 transition-transform"
-                src={uploadIcon}
-                alt="upload icons"
-              />
-              <p className="text-xs sm:text-sm font-semibold text-[#063154]">Clique para adicionar fotos</p>
-              <p className="text-xxs sm:text-xs text-[#BCC5CC]">PNG, JPG até 5MB</p>
+              <p className="text-xs sm:text-sm font-semibold text-[#063154]">Cole o link da imagem do seu imóvel</p>
               <input
-                type="file"
+                type="url"
                 id="fotos"
-                accept="image/*"
-                multiple
-                className="hidden"
-                {...register("fotos")}
+                placeholder="https://exemplo.com/foto.jpg"
+                className="w-full rounded-xl border border-[#BCC5CC] px-4 py-3 text-sm text-[#063154] placeholder-[#BCC5CC] bg-[#F7F6F2]/20 focus:outline-none focus:ring-2 focus:ring-[#025F67] focus:border-transparent transition-all"
+                {...register("foto")}
               />
             </label>
           </div>

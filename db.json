@@ -156,28 +156,6 @@
           "hospedes": 4
         }
       ]
-    },
-    {
-      "titulo": "casa na praia",
-      "tipo": "Casa",
-      "cidade": "pelotas",
-      "bairro": "laranjal",
-      "preco": 500,
-      "capacidade": 7,
-      "disponivel": "2026-06-06",
-      "fotos": {
-        "0": {},
-        "1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREQ_EFcjws2FcDz5SI-A1N9rtPUxNB_ihEcA&s"
-      },
-      "comodidades": [
-        "Wi-fi",
-        "Piscina",
-        "Garagem",
-        "Ar Condicionado"
-      ],
-      "avaliacao": 0,
-      "reservas": [],
-      "id": "O4lPhrLJY5M"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
