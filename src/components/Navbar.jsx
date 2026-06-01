@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router";
-import houseIcon from "../assets/housesun.svg";
 import magnifyIcon from "../assets/magnify.svg";
 
 export function Navbar({ busca, setBusca }) {
@@ -13,7 +12,6 @@ export function Navbar({ busca, setBusca }) {
             onClick={() => navigate("/")}
             className="text-[#063154] font-extrabold text-lg sm:text-xl tracking-tight hover:opacity-90 transition-opacity flex items-center gap-2 text-left"
           >
-            <img className="w-9 h-9 sm:w-10 sm:h-10 transform hover:scale-105 transition-transform" src={houseIcon} alt="logo" />
             <span className="leading-tight">
               Imóveis<br /><span className="text-[#025F67]">Avenida</span>
             </span>
