@@ -4,8 +4,8 @@
       "id": "1",
       "titulo": "Apartamento aconchegante no centro",
       "tipo": "Apartamento",
-      "cidade": "Porto Alegre",
-      "bairro": "Moinhos de Vento",
+      "cidade": "Rio de Janeiro",
+      "bairro": "Copacabana",
       "preco": 320,
       "capacidade": 4,
       "comodidades": [
@@ -14,7 +14,7 @@
         "Cozinha"
       ],
       "disponivel": "2025-06-01",
-      "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREQ_EFcjws2FcDz5SI-A1N9rtPUxNB_ihEcA&s",
+      "foto": "https://images.adsttc.com/media/images/6943/029d/563f/e701/7ed4/9902/slideshow/reforma-apartamento-azul-and-branco-messina-rivas_12.jpg?1765999280",
       "avaliacao": 4.92,
       "reservas": [
         {
@@ -46,7 +46,7 @@
         "Garagem"
       ],
       "disponivel": "2025-05-20",
-      "foto": null,
+      "foto": "https://images.adsttc.com/media/images/6826/93b1/5ae7/be01/8667/404e/slideshow/casa-mp-7nze-arquitetura_41.jpg?1747358653",
       "avaliacao": 4.87,
       "reservas": [
         {
@@ -59,8 +59,8 @@
     },
     {
       "id": "3",
-      "titulo": "Kitnet moderna próxima à praia",
-      "tipo": "Kitnet",
+      "titulo": "Studio próxima à praia",
+      "tipo": "Studio",
       "cidade": "Torres",
       "bairro": "Praia Grande",
       "preco": 190,
@@ -70,54 +70,16 @@
         "Ar-condicionado"
       ],
       "disponivel": "2025-06-15",
-      "foto": null,
+      "foto": "https://i.pinimg.com/1200x/84/67/44/846744557ab031ac8dde8cc8f0313f28.jpg",
       "avaliacao": 4.75,
       "reservas": []
     },
     {
       "id": "4",
-      "titulo": "Chácara tranquila na serra gaúcha",
-      "tipo": "Chácara",
-      "cidade": "Canela",
-      "bairro": "Zona Rural",
-      "preco": 550,
-      "capacidade": 10,
-      "comodidades": [
-        "Churrasqueira",
-        "Fogão a lenha",
-        "Trilhas",
-        "Estacionamento"
-      ],
-      "disponivel": "2025-06-01",
-      "foto": null,
-      "avaliacao": 4.96,
-      "reservas": [
-        {
-          "nome": "Pedro Alves",
-          "checkIn": "2025-06-20",
-          "checkOut": "2025-06-23",
-          "hospedes": 8
-        },
-        {
-          "nome": "Julia Mendes",
-          "checkIn": "2025-07-10",
-          "checkOut": "2025-07-14",
-          "hospedes": 5
-        },
-        {
-          "nome": "Renato Borges",
-          "checkIn": "2025-08-01",
-          "checkOut": "2025-08-04",
-          "hospedes": 10
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "titulo": "Loft estiloso no bairro histórico",
+      "titulo": "Loft próximo as faculdades",
       "tipo": "Loft",
       "cidade": "Pelotas",
-      "bairro": "Centro Histórico",
+      "bairro": "Centro",
       "preco": 250,
       "capacidade": 2,
       "comodidades": [
@@ -126,17 +88,17 @@
         "Netflix"
       ],
       "disponivel": "2025-05-28",
-      "foto": null,
+      "foto": "https://i.pinimg.com/736x/42/a0/69/42a0693bca93a79192333ed47473d350.jpg",
       "avaliacao": 4.83,
       "reservas": []
     },
     {
-      "id": "6",
+      "id": "5",
       "titulo": "Cobertura com vista panorâmica",
       "tipo": "Apartamento",
-      "cidade": "Porto Alegre",
-      "bairro": "Bela Vista",
-      "preco": 620,
+      "cidade": "Itajaí",
+      "bairro": "Praia Brava",
+      "preco": 1620,
       "capacidade": 6,
       "comodidades": [
         "Piscina",
@@ -146,7 +108,7 @@
         "Ar-condicionado"
       ],
       "disponivel": "2025-06-10",
-      "foto": null,
+      "foto": "https://cdn.imoveisgodoy.com.br/wp-content/uploads/2024/02/08151344/Apartamento-Decorado-no-Brava-Home3-475x360.png",
       "avaliacao": 4.99,
       "reservas": [
         {

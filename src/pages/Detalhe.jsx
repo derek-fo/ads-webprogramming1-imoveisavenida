@@ -265,7 +265,7 @@ export function Detalhe() {
                   </div>
 
                   <div className="p-2.5">
-                    <label className="block text-xxs font-black text-[#063154]/70 tracking-wide mb-0.5">HÓSPEDES</label>
+                    <label className="block text-xxs font-black text-[#063154]/70 tracking-wide mb-0.5">Hóspedes</label>
                     <select required className="w-full text-xs font-semibold text-[#063154] outline-none bg-transparent" {...register("hospedes")}>
                       {Array.from({ length: imovel.capacidade }, (_, i) => i + 1).map((n) => (
                         <option key={n} value={n}>{n} hóspede{n > 1 ? "s" : ""}</option>

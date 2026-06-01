@@ -8,8 +8,6 @@ const categorias = [
   { label: "Todos", value: "" },
   { label: "Casas", value: "Casa" },
   { label: "Apartamentos", value: "Apartamento" },
-  { label: "Kitnets", value: "Kitnet" },
-  { label: "Chácaras", value: "Chácara" },
   { label: "Lofts", value: "Loft" },
   { label: "Studios", value: "Studio" },
 ];
@@ -61,7 +59,7 @@ export function Home({ busca, setBusca }) {
       <Navbar busca={busca} setBusca={setBusca} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 flex-1 w-full">
-        <div className="flex gap-6 sm:gap-8 overflow-x-auto pb-3 mb-6 scrollbar-none border-b border-[#BCC5CC]/30 snap-x">
+        <div className="flex justify-center gap-6 sm:gap-8 overflow-x-auto pb-3 mb-6 scrollbar-none border-b border-[#BCC5CC]/30 snap-x">
           {categorias.map((cat) => (
             <button
               key={cat.value}
