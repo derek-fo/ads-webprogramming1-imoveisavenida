@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import magnifyIcon from "../assets/magnify.svg";
 
 export function Navbar({ busca, setBusca }) {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // hook de navegacao
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#BCC5CC]/30 shadow-xs bg-white/90 backdrop-blur-md">
@@ -13,7 +13,7 @@ export function Navbar({ busca, setBusca }) {
             className="text-[#063154] font-extrabold text-lg sm:text-xl tracking-tight hover:opacity-90 transition-opacity flex items-center gap-2 text-left"
           >
             <span className="leading-tight">
-              Imóveis<br /><span className="text-[#025F67]">Avenida</span>
+              Imóveis <span className="text-[#025F67]">Avenida</span>
             </span>
           </button>
 
@@ -33,7 +33,7 @@ export function Navbar({ busca, setBusca }) {
           </nav>
         </div>
 
-        {setBusca && (
+        {setBusca && ( // mostra a barra de busca se a funcao for passada como propriedade
           <div className="pb-4">
             <div className="flex items-center gap-3 border border-[#BCC5CC] rounded-full shadow-xs hover:shadow-md focus-within:shadow-md focus-within:border-[#025F67] transition-all px-4 py-2.5 sm:px-5 sm:py-3 max-w-2xl mx-auto bg-white">
               <input

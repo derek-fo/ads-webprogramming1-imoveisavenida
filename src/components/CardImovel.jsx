@@ -1,11 +1,11 @@
-export function CardImovel({ imovel, onVerDetalhe }) {
+export function CardImovel({ imovel, onVerDetalhe }) { // recebe o objeto do imovel e a funcao de ver detalhes como propriedades 
   return (
     <div
       className="cursor-pointer group flex flex-col"
       onClick={() => onVerDetalhe(imovel)}
     >
       <div className="relative overflow-hidden rounded-2xl aspect-4/3 sm:aspect-square mb-3 bg-[#BCC5CC]/20 border border-[#BCC5CC]/20 shadow-xs">
-        {imovel.foto ? (
+        {imovel.foto ? ( // ternario, funciona como um if/else 
           <img
             src={imovel.foto}
             alt={imovel.titulo}
