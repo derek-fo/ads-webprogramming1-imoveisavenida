@@ -15,12 +15,12 @@ const categorias = [
 export function Home({ busca, setBusca }) {
   const navigate = useNavigate();
 
-  const [imoveis, setImoveis] = useState([]); // estados para imoveis, carregamento, erro e categoria
+  const [imoveis, setImoveis] = useState([]);
   const [loading, setLoading] = useState(true);
   const [erro, setErro] = useState(null);
   const [categoria, setCategoria] = useState("");
 
-  useEffect(() => { // busca dados no db
+  useEffect(() => {
     async function buscaImoveis() {
       try {
         setLoading(true);
@@ -38,7 +38,7 @@ export function Home({ busca, setBusca }) {
     buscaImoveis();
   }, []);
 
-  const imoveisFiltrados = imoveis.filter((im) => { // filtro para mostrar imovel conforme digitado no buscar
+  const imoveisFiltrados = imoveis.filter((im) => {
     const termo = busca.toLowerCase();
     const matchBusca =
       !termo ||
@@ -109,7 +109,7 @@ export function Home({ busca, setBusca }) {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-8">
-            {imoveisFiltrados.map((imovel) => ( // percorre os imoveis filtrados e mostra o card
+            {imoveisFiltrados.map((imovel) => (
               <CardImovel
                 key={imovel.id}
                 imovel={imovel}

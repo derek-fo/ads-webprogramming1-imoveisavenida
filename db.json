@@ -118,6 +118,33 @@
           "hospedes": 4
         }
       ]
+    },
+    {
+      "titulo": "Casa no morro",
+      "tipo": "Casa",
+      "cidade": "Pelotas",
+      "bairro": "Centro",
+      "preco": 1000,
+      "capacidade": 7,
+      "disponivel": "2026-12-05",
+      "foto": "https://cdn.assets-casacor.tec.br/file/casacor-images-news/2024/01/casa-montanha-vista-espetacular-serra-das-araras-andrea-chicharo-credito-andre-nazareth-10.webp",
+      "comodidades": [
+        "Piscina",
+        "Wi-fi",
+        "TV",
+        "Ar Condicionado",
+        "Churrasqueira"
+      ],
+      "avaliacao": 0,
+      "reservas": [
+        {
+          "nome": "derek",
+          "checkIn": "2026-06-23",
+          "checkOut": "2026-06-27",
+          "hospedes": 4
+        }
+      ],
+      "id": "MykKYJ2Z-9Y"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

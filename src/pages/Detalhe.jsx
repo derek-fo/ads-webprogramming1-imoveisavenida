@@ -15,7 +15,7 @@ import bedIcon from "../assets/bed.svg";
 
 export function Detalhe() {
   const navigate = useNavigate();
-  const location = useLocation(); // hook para acessar o estado enviado na navegacao do detalhe na home
+  const location = useLocation();
   const imovel = location.state?.imovel;
 
   const { register, handleSubmit, reset } = useForm();
@@ -51,10 +51,10 @@ export function Detalhe() {
     );
   }
 
-  const totalReservas = reservas.length; // calculo de reservas, hospedes e dias 
+  const totalReservas = reservas.length;
   const mediaHospedes =
     totalReservas > 0
-      ? (reservas.reduce((acc, r) => acc + r.hospedes, 0) / totalReservas).toFixed(1) // reduce para calcular valores 
+      ? (reservas.reduce((acc, r) => acc + r.hospedes, 0) / totalReservas).toFixed(1)
       : 0;
 
   const mediaDias =
@@ -89,7 +89,7 @@ export function Detalhe() {
 
     try {
       const resposta = await fetch(`http://localhost:3000/imoveis/${imovel.id}`, { 
-        method: "PATCH", // metodos patch utilizado para atualizar o imovel com a nova reserva 
+        method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ reservas: reservasAtualizadas }),
       });

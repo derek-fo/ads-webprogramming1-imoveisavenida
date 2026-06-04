@@ -12,7 +12,7 @@ import acIcon from "../assets/ac.svg";
 import bedIcon from "../assets/bed.svg";
 
 export function Anunciar({ onNavegar }) {
-  const { register, handleSubmit, reset, setFocus } = useForm(); // hook para regidtro, organizar dados, resetar formulario e focar no campo
+  const { register, handleSubmit, reset, setFocus } = useForm();
   const [comodidades, setComodidades] = useState([]);
 
   const comodidadesOpcoes = [
@@ -37,7 +37,7 @@ export function Anunciar({ onNavegar }) {
     const foto = data.foto;
 
     try {
-      const resposta = await fetch("http://localhost:3000/imoveis", { // requisicao para cadastrar imovel no db
+      const resposta = await fetch("http://localhost:3000/imoveis", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -67,7 +67,7 @@ export function Anunciar({ onNavegar }) {
     reset();
   }
 
-  function toggleComodidade(item) { // adiociona ou remove comodidade conforme clicado
+  function toggleComodidade(item) {
     setComodidades((prev) =>
       prev.includes(item) ? prev.filter((c) => c !== item) : [...prev, item],
     );

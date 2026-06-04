@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import magnifyIcon from "../assets/magnify.svg";
 
 export function Navbar({ busca, setBusca }) {
-  const navigate = useNavigate(); // hook de navegacao
+  const navigate = useNavigate();
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#BCC5CC]/30 shadow-xs bg-white/90 backdrop-blur-md">
@@ -33,7 +33,7 @@ export function Navbar({ busca, setBusca }) {
           </nav>
         </div>
 
-        {setBusca && ( // mostra a barra de busca se a funcao for passada como propriedade
+        {setBusca && (
           <div className="pb-4">
             <div className="flex items-center gap-3 border border-[#BCC5CC] rounded-full shadow-xs hover:shadow-md focus-within:shadow-md focus-within:border-[#025F67] transition-all px-4 py-2.5 sm:px-5 sm:py-3 max-w-2xl mx-auto bg-white">
               <input
